@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Kalkulator Sederhana</title>
+</head>
+
+<body>
+    <h2>Kalkulator Sederhana</h2>
+    <form>
+        Bil 1
+        <input type = "type" id = "n1"><br><br>
+        Bil 2
+        <input type = "type" id = "n2"><br><br>
+        <button type = "button" onclick = "penjumlahan()">+</button>
+        <button type = "button" onclick = "pengurangan()">-</button>
+        <button type = "button" onclick = "perkalian()">x</button>
+        <button type = "button" onclick = "pembagian()">/</button>
+    </form>
+
+    <p id = "hasil">Hasil = </p>
+</body>
+
+<script>
+    function penjumlahan(){
+        var n1 = parseFloat(document.getElementById("n1").value);
+        var n2 = parseFloat(document.getElementById("n2").value);
+        var hasil = n1 + n2;
+        document.getElementById("hasil").innerHTML = "Hasil = " + hasil;
+    }
+    function pengurangan(){
+        var n1 = parseFloat(document.getElementById("n1").value);
+        var n2 = parseFloat(document.getElementById("n2").value);
+        var hasil = n1 - n2;
+        document.getElementById("hasil").innerHTML = "Hasil = " + hasil;
+    }
+    function perkalian(){
+        var n1 = parseFloat(document.getElementById("n1").value);
+        var n2 = parseFloat(document.getElementById("n2").value);
+        var hasil = n1 * n2;
+        document.getElementById("hasil").innerHTML = "Hasil = " + hasil;
+    }
+    function pembagian(){
+        var n1 = parseFloat(document.getElementById("n1").value);
+        var n2 = parseFloat(document.getElementById("n2").value);
+        var hasil = n1 / n2;
+        document.getElementById("hasil").innerHTML = "Hasil = " + hasil;
+    }
+</script>
